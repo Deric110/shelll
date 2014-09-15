@@ -1,0 +1,37 @@
+-e filename 如果 filename存在，则为真
+-d filename 如果 filename为目录，则为真 
+-f filename 如果 filename为常规文件，则为真
+-L filename 如果 filename为符号链接，则为真
+-r filename 如果 filename可读，则为真 
+-w filename 如果 filename可写，则为真 
+-x filename 如果 filename可执行，则为真
+-s filename 如果文件长度不为0，则为真
+-h filename 如果文件是软链接，则为真
+filename1 -nt filename2 如果 filename1比 filename2新，则为真。
+filename1 -ot filename2 如果 filename1比 filename2旧，则为真。
+-eq 等于
+-ne 不等于
+-gt 大于
+-ge 大于等于
+-lt 小于
+-le 小于等于
+至于！号那就是取非了呗！
+[ -f "somefile" ] ：判断是否是一个文件
+[ -x "/bin/ls" ] ：判断/bin/ls是否存在并有可执行权限
+[ -n "$var" ] ：判断$var变量是否有值
+[ "$a" = "$b" ] ：判断$a和$b是否相等          -r file     用户可读为真
+  -w file     用户可写为真
+  -x file     用户可执行为真
+  -f file     文件为正规文件为真
+  -d file     文件为目录为真
+  -c file     文件为字符特殊文件为真
+  -b file     文件为块特殊文件为真
+  -s file     文件大小非0时为真
+  -t file     当文件描述符(默认为1)指定的设备为终端时为真 
+-ne —比较两个参数是否不相等
+-lt —参数1是否小于参数2
+-le —参数1是否小于等于参数2
+-gt —参数1是否大于参数2
+-ge —参数1是否大于等于参数2
+-f — 检查某文件是否存在（例如，if [ -f "filename" ]）
+-d — 检查目录是否存在
